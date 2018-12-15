@@ -1,7 +1,8 @@
+let once;
 setTimeout(function(){
     $(document).ready(function() {
         $("#DHTMLSuite_menuItem441").click(function()
-        {
+        {if (once === undefined){
             setTimeout(function(){
                 $(".attendDiv table").each(function() 
                 { 
@@ -22,6 +23,7 @@ setTimeout(function(){
                     $(this).find("tr:last").after(s);
                 });
             }, 500);
+once = false;}
         });
     });
 }, 500);
